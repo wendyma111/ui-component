@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
 import './App.css';
+import NotifyDemo from './demos/notify'
+import GridDemo from './demos/grid'
+import SortableDemo from './demos/sortable'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return(
+      <div className="App">
+        <h3>notify组件（函数组件）——点击下列按钮测试</h3>
+        <NotifyDemo />
+        <hr />
+        <br />
+        <h3>grid组件——开启/关闭loading按钮仅为展示loading功能所用，并得组件内部组成部分</h3>
+        <GridDemo />
+        <hr />
+        <br />
+        <h3>sortable组件——可拖拽任意卡片交换位置，➕卡片用于新增卡片</h3>
+        <SortableDemo />
+        <hr />
+      </div>
+    )
+  }
 }
 
 export default App;
